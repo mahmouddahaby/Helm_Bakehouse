@@ -1,0 +1,20 @@
+metadata:
+  name: bakehouse
+  serviceName: bakehouse-svc
+  namespace: default
+  labels:
+    app: Bakehouse
+    version: "1.0.0"
+
+replicaCount: 1
+
+image:
+  repository: m7moxd/bakehouse
+  pullPolicy: Always
+  tag: "latest"
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 80
+  nodePort: 30080
